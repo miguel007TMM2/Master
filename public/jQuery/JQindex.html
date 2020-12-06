@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+            crossorigin="anonymous">
+    </script>
+    <style>
+        .zebra{
+            border: 5px dashed black;
+        }
+        .big{
+            font-size: 30px;
+        }
+        .margin-superior{
+            display: block;
+            margin-top: 45px;
+        }
+        .resaltado{
+            border-bottom: 2px solid brown;
+        }
+    </style>
+    <script src="javascript/01-selectores.js"></script>
+</head>
+<body>
+
+    <h1>Aprender jQuery con victor robles</h1>
+
+    <ul>
+        <li><a href="https://www3.animeflv.net/" title="Animeflv"> Ir a Animeflv</a></li>
+        <li><a href="https://www.youtube.com/" title="youtube"> Ir a youtube</a></li>
+        <li><a href="https://www.facebook.com/" title="facebok">Ir a facebok</a></li>
+        <li><a href="https://www.google.com/" title="google">Ir a google</a></li>
+    </ul>
+
+    <p id="rojo" class="sin_border">Ejercicios de jQuery</p>
+    <p id="amarillo" class="zebra">Practica de selectores</p>
+    <p id="verde" class="sin_border">prueba 1</p>
+    <p class="zebra">Soy un parrafo blanco</p>
+
+    <div id="caja">
+        <p>Hola soy una caja</p>
+        <ul>
+            <li>Elemento 1</li>
+            <li class="resaltado">Elemento 2</li>
+        </ul>
+        <span class="resaltado">soy una caja</span>
+    </div>
+
+    <script>
+        // $(document).ready(function() {
+        //     console.log('jQuery y la WEB cargados....');
+        // })
+    </script>
+</body>
+</html>
