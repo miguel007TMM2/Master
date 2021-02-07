@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+            crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="javascript/jquery-ui-1.12.1/jquery-ui.css">
+    <script type="text/javascript" src="javascript/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="javascript/06-interface.js"></script>
+    <title>JQUERY UI</title>
+    <style>
+        .element{
+            width: 300px;
+            height: 200px;
+            border: 4px solid black;
+            background: lightblue;
+            margin: 35px;
+            float: left;
+            position: relative;
+            cursor: pointer;
+        }
+        .lista li{
+            width: 80%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            list-style: none;
+            cursor: pointer;
+        }
+        ul .ui-selecting{
+            background: green;
+        }
+        ul .ui-selected{
+            background: blue;
+        }
+        #element-moved{
+            width: 100px;
+            height: 100px;
+            border: 4px solid red;
+        }
+        #area{
+            width: 300px;
+            height: 300px;
+            border: 4px solid green;
+        }
+        .effects-box{
+            background: pink;
+            float: none;
+            display: none;
+        }
+        a{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendiendo JQUERY UI con Miguel Mateo</h1>
+    <hr>
+        <h3>Tooltips</h3>
+        <a href="#"  title="access to my data of this web">My data</a>
+        <a href="#"  title="authenticate">Login</a>
+        <a href="#" title="Put your information">Register</a>
+    <hr>
+        <h3>Dialog box</h3>
+        <button id="throw-popup">throw popup</button>
+        <div id="popup" title="Are you sure?" style="display: none;">
+            <p>
+                If you stay in this course you will learn a lot
+            </p>
+        </div>
+    <hr>
+        <h3>Calender</h3>
+        <input type="text" id="calender">
+    <hr>
+        <h3>Show and hide element</h3>
+        <button id="show"> Show</button>
+        <div class="effects-box element"></div>
+    <hr>
+        <h3>Page tabs</h3>
+        <div id="page-tabs">
+            <ul>
+                <li><a href="#tabs-1">Tabs 1</a></li>
+                <li><a href="#tabs-2">Tabs 2</a></li>
+                <li><a href="#tabs-3">Tabs 3</a></li>
+            </ul>
+            <div id="tabs-1"> 
+                Hello i'm the first tab
+            </div>
+            <div id="tabs-2"> 
+                Hello i'm the second tab
+            </div>
+            <div id="tabs-3"> 
+                Hello i'm the third tab
+            </div>
+        </div>
+    <hr>
+    <br>
+        <h1>Put element in front of other</h1>
+        <div id="element-moved" class="elemento"></div>
+        <div id="area" class="elemento"></div>
+    <hr>
+        <h3>Select and organize element</h3>
+        <ul class="lista">
+            <li>GTA5</li>
+            <li>Need for speed</li>
+            <li>Crash banticoot</li>
+            <li>Super Mario Bros</li>
+            <li>Galaxia</li>
+        </ul>
+    <hr>
+        <h3>Moved element</h3>
+        <div  class="element">
+            Soy un elemento de la web 1
+        </div>
+        <div  class="element">
+            Soy un elemento de la web 2
+        </div>
+        <div  class="element">
+            Soy un elemento de la web 3
+        </div>
+   
+</body>
+</html>

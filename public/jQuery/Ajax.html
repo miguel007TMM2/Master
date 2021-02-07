@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+            crossorigin="anonymous">
+    </script>
+    
+    <script src="javascript/05-ajax.js"></script>
+    <style>
+        #datos{
+            border: 2px solid green;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Ajax con Miguel Rafael Mateo</h1>
+    <form action="https://reqres.in/api/users?page=2" method="post" id="form" >
+        <input type="text" name="name" id="name">
+        <input type="text" name="job" id="job">
+        <button type="submit" value="register">Register</button>
+    </form>
+    <br>
+    <div id="datos"></div>
+</body>
+</html>

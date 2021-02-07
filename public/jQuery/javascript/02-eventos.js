@@ -1,5 +1,6 @@
         $(document).ready(function () {
             var caja = $('#caja')
+            var datos = $('#datos')
 
             // caja.mouseover(function () { 
             //     $(this).css('background', 'red') 
@@ -31,4 +32,35 @@
                 $(this).css('background', 'pink') 
                         .css('color', 'red') 
             });
+            var nombre = $('#nombre')
+            
+            nombre.focus(function () { 
+                $(this).css("border", "2px solid pink")
+             });
+
+            nombre.blur(function () { 
+                $(this).css("border", "1px solid pink")
+                datos.text($(this).val()).show()
+             });
+
+             //mouse move y mouse up
+
+             datos.mousedown(function () { 
+                 $(this).css("border-color", "gray")
+             });
+
+             datos.mouseup(function () { 
+                $(this).css("border-color", "black")
+            });
+
+            // Mousemove
+
+            $(document).mousemove(function () { 
+                // console.log(event.clientX, 'En X')
+                // console.log(event.clientY, 'En Y')
+                $('body').css('cursor', 'none')
+                $('#sigueme').css('left', event.clientX)
+                                .css('top', event.clientY)
+             })
+
          })
