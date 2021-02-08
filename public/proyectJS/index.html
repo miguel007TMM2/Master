@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto con javascript</title>
+    <!-- Style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" id="theme" type="text/css" href="css/red.css">
+
+    <!-- jQuery library (served from Google) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- bxSlider CSS file -->
+    <link href="bxslider-4-master/src/css/jquery.bxslider.css" rel="stylesheet" />
+
+    <!-- bxSlider Javascript file -->
+    <script src="bxslider-4-master/src/js/jquery.bxslider.js"></script>   
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+    <div id="selector-theme">
+        <div id="togreen">
+
+        </div>
+        <div id="tored">
+
+        </div>
+        <div id="toblue">
+
+        </div>
+    </div>
+    <section id="global">
+        <header>
+            <!-- header -->
+            <div id="logo">
+                <h1>Proyecto JS</h1> 
+            </div>
+            <div class="clearfix">
+
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="#">RELOJ</a></li>
+                    <li><a href="about.html">SOBRE MI</a></li>
+                    <li><a href="#">CONTACTO</a></li> 
+                </ul>
+            </nav>
+
+        </header>
+        <!-- slider -->
+        
+        <div id="slider">
+            <ul class="bxslider">
+                <li><img src="img/hojas.jpg" /></li>
+                <li><img src="img/rojo.jpg" /></li>
+                <li><img src="img/cielo.jpg"/></li>
+            </ul>
+        </div>
+        <!-- content -->
+        <section id="content">
+            <div id="posts">
+                <!-- Post uploads -->
+            </div>
+            <aside id="sidebar">
+                <div id="about">
+                    <h4><span>Quien soy?</span></h4>
+                    <img src="img/caracol.jpg" alt="">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
+                        explicabo sequi praesentium voluptatum maiores pariatur consectetur in ab nulla ut ex, a
+                        liquid voluptates ipsa optio blanditiis ratione nihil enim?
+                    </p>
+                </div>
+                
+                <div id="login">
+                    <h4><span>Identificate</span></h4>
+                    <form>
+                        <label for="name">
+                            Nombre
+                        </label>
+                        <input type="text" name="name" id="form_name">
+                        <label for="correo">
+                            Correo
+                        </label>
+                        <input type="email" name="email" id="form_email">
+                        <label for="password">
+                            Password
+                        </label>
+                        <input type="password" name="password" id="form_password">
+                        <input type="submit" value="Entrar">
+                    </form>
+                </div>
+            </aside>
+            <div class="clearfix">
+
+            </div>
+        </section>
+    </section>
+    <footer>
+        Curso de javascript de Miguel Rafael Mateo&copy;
+        <a href="#" class="up">Ir arriba</a>
+    </footer>
+</body>
+</html>
