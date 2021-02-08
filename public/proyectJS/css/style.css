@@ -63,9 +63,9 @@
 .post{
     padding: 7px;
 }
-.post h2{
+h2{
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 30px;
     color: #333;
 
 }
@@ -185,4 +185,24 @@ footer{
     text-decoration: none;
     display: block;
     float: right;
+}
+#box{
+    width: 60%;
+    float: left;
+    margin-top: 40px;
+}
+
+#aco{
+    margin-top: 20px;
+}
+#reloj{
+
+    font-size: 30px;
+    font-weight: bold;
+    font-family:Helvetica, Arial;
+    color:#333;   
+    border:5px dashed #333;
+    width: 33%;
+    padding: 20px;
+    margin: 0px auto;
 }

@@ -1,53 +1,55 @@
 $(document).ready(function(){
     //Slider
     if(window.location.href.indexOf('index') > -1){
-    $('.bxslider').bxSlider({
-        mode:'fade',
-        captions:false,
-        slideWidth:1200,
-        responsive:true
-    });
+      $(".bxslider").bxSlider({
+        mode: "fade",
+        captions: false,
+        slideWidth: 1200,
+        responsive: true,
+      });
 
-    //Posts
-    
-    const posts = [{
-        title: 'Prueba de titulo 1',
-        date: new Date()    ,
-        content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
+      //Posts
+      var data_publication ='Published the day ' + moment().format('Do') + ' of the month ' + moment().format('MMMM')+ ' of the year '+ moment().format('YYYY');;;
+      const posts = [
+        {
+          title: "Prueba de titulo 1",
+          date: data_publication,
+          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
         explicabo sequi praesentium voluptatum maiores pariatur consectetur in ab nulla ut ex, a
-        liquid voluptates ipsa optio blanditiis ratione nihil enim?`
-    },{
-        title: 'Prueba de titulo 2',
-        date: new Date(),
-        content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
+        liquid voluptates ipsa optio blanditiis ratione nihil enim?`,
+        },
+        {
+          title: "Prueba de titulo 2",
+          date: data_publication,
+          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
         explicabo sequi praesentium voluptatum maiores pariatur consectetur in ab nulla ut ex, a
-        liquid voluptates ipsa optio blanditiis ratione nihil enim?`
-    
-    },{
-        title: 'Prueba de titulo 3',
-        date: new Date(),
-        content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
+        liquid voluptates ipsa optio blanditiis ratione nihil enim?`,
+        },
+        {
+          title: "Prueba de titulo 3",
+          date: data_publication,
+          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
         explicabo sequi praesentium voluptatum maiores pariatur consectetur in ab nulla ut ex, a
-        liquid voluptates ipsa optio blanditiis ratione nihil enim?`
-    
-    },{
-        title: 'Prueba de titulo 4',
-        date: new Date(),
-        content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
+        liquid voluptates ipsa optio blanditiis ratione nihil enim?`,
+        },
+        {
+          title: "Prueba de titulo 4",
+          date: data_publication,
+          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
         explicabo sequi praesentium voluptatum maiores pariatur consectetur in ab nulla ut ex, a
-        liquid voluptates ipsa optio blanditiis ratione nihil enim?`
-    
-    },{
-        title: 'Prueba de titulo 5',
-        date: new Date(),
-        content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
+        liquid voluptates ipsa optio blanditiis ratione nihil enim?`,
+        },
+        {
+          title: "Prueba de titulo 5",
+          date: data_publication,
+          content: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi illum, 
         explicabo sequi praesentium voluptatum maiores pariatur consectetur in ab nulla ut ex, a
-        liquid voluptates ipsa optio blanditiis ratione nihil enim?`
-    
-    }]
+        liquid voluptates ipsa optio blanditiis ratione nihil enim?`,
+        },
+      ];
 
-    posts.forEach((element, index)=>{
-        var post=`
+      posts.forEach((element, index) => {
+        var post = `
         <article class="post">
             <h2>${element.title}</h2>
             <span class="date">${element.date}</span>
@@ -56,10 +58,11 @@ $(document).ready(function(){
             </p>    
             <a href="#" class="button-more">Leer mas</a>
         </article>
-        `
-        $("#posts").append(post)
-    })
+        `;
+        $("#posts").append(post);
+      });
     }
+
     //selector theme
     var theme = $('#theme')
     $('#togreen').click(function () { 
@@ -108,5 +111,14 @@ $(document).ready(function(){
             location.reload();
          })
     }
-    
+    if(window.location.href.indexOf('about') > -1){
+        $('#aco').accordion();
+    }
+    if(window.location.href.indexOf('reloj') > -1){
+        setInterval(function () { 
+            var reloj = moment().format('hh:mm:ss a');
+            $('#reloj').html(reloj);
+        }, 1000);
+        
+    }
 }); 
