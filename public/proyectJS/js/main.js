@@ -121,4 +121,14 @@ $(document).ready(function(){
         }, 1000);
         
     }
+    //validation
+    if(window.location.href.indexOf('contact') > -1){
+      $('#calender').datepicker();
+      $.validate({
+        lang: 'es',
+        errorMessagePosition:'top',
+        scrollToTopOnError: true
+
+      })
+    }
 }); 
