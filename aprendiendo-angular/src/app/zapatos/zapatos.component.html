@@ -1,0 +1,48 @@
+<h2>{{title}}</h2>
+<p>
+    Add marca
+</p>
+<p>
+    <input type="text" [(ngModel)]='my_marca' (blur)="onBlur()" (Keyup.enter)='showWord()'>
+    <button (click)="getMarca()">Mostrar </button>
+    <button (click)="addMarca()">addMarca </button>
+    <button (click)="delteMarca()">Borrar marca</button>
+</p>
+<p>
+    {{my_marca}}
+</p>
+<p> <strong>Tipos de Zapatos</strong></p>
+<p>Compra los tenis de las mejores marcas </p>
+<ul>
+    <li *ngFor="let marcas of arry; let indice = index">{{indice +' - '+ marcas}}
+        <button (click)="deleteMarca(indice)">Borrar</button>
+    </li>
+</ul>
+<p>
+    Modelo de tenis disponible:
+</p>
+<ul>
+    <li *ngFor="let deportiva of zapatos">
+            <span [ngStyle]="{
+                'text-decoration': !deportiva.stock ? 'line-throught' : 'node'
+            }">{{deportiva.nombre}} - precio = <strong [class.altoPrecio]="deportiva.precio >= 80" [ngClass]="{'fondoRojo': deportiva.precio > 100, 'subrayado': deportiva.marca == 'Nike'}">{{deportiva.precio}}</strong> $</span>
+            <span *ngIf="deportiva.precio <= 80" 
+                [style.background]="deportiva.precio <= 80? 'green':'transparent'"
+                [style.color]="deportiva.precio <= 80? 'white':'black'" > !EN OFERTA </span>
+        
+    </li>
+    
+</ul>
+
+<p>El color de las mayoria de nuestros tenis es:</p>
+<ul [ngSwitch]="color">
+    <input type="text" [(ngModel)]="color">
+    <li *ngSwitchCase="'yellow'"> El color predominante es <span [ngStyle]="{ 'background': color,
+        'color': 'white' }">amarillo</span></li>
+    <li *ngSwitchCase="'red'"> El color predominante es <span [ngStyle]="{ 'background': color,
+        'color': 'white'}">Rojo</span></li>
+    <li *ngSwitchCase="'blue'"> El color predominante es <span [ngStyle]="{ 'background': color,
+        'color': 'white'}">Azul</span></li>
+    <li *ngSwitchCase="'orange'"> El color predominante es <span [ngStyle]="{ 'background': color,
+        'color': 'white'}">Naranja</span></li>
+</ul>

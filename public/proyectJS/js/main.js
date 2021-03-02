@@ -74,6 +74,7 @@ $(document).ready(function(){
     $('#toblue').click(function () { 
         theme.attr('href', 'css/blue.css');
     })
+
     //Scroll hacia arriba
     $('.up').click(function (e) {
         e.preventDefault();

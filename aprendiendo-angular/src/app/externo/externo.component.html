@@ -1,0 +1,33 @@
+{{fecha | date: 'dd/MM/yy'}} <br>
+{{fecha | date: 'fullDate' | uppercase}} <br>
+{{'HOLA MUNDO USANDO PIPE' | lowercase}} <br>
+{{ 88 | calculadora: 4}}
+<hr>
+<div *ngIf="user">
+    <input type="text" [(ngModel)]="userId" (keyup.enter)="cargarUser()">
+    <br>
+    <img src="{{user.data.avatar}}" width="200px">
+    <h2>{{user.data.first_name + ' '+ user.data.last_name}}</h2>
+</div>
+
+<hr>
+<h2>Crear usuario</h2>
+
+<!-- <form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <p>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" #name="ngMode" [(ngModel)]="newUser.name" required>
+        <span *ngIf="name.touched && !name.valid">
+            EL nombre es obligatorio
+        </span>
+    </p>
+    <p>
+        <label for="job">Trabajo</label>
+        <input type="text" name="job" #name="ngMode" [(ngModel)]="newUser.job" required>
+        <span *ngIf="job.touched && !job.valid">
+            EL Trabajo es obligatorio
+        </span>
+    </p>
+
+    <input type="submit" value="Save User" [disabled]="!newUser.form.valid">
+</form> -->
